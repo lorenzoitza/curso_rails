@@ -35,4 +35,8 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+ gem 'debugger'
+
+group :development do
+  gem 'meta_request'
+end

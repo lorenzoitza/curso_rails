@@ -1,0 +1,9 @@
+<h1>Blogposts#index</h1>
+<%= link_to "New Post", new_blogpost_path %>
+<br />
+<% @blog_posts.each do |blogpost| %>
+  <div>
+    <%= blogpost.title %>
+    <%= link_to "See More", blogpost_path(blogpost) %>
+  </div>
+<% end %>

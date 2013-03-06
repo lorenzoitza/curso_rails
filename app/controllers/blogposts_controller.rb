@@ -25,12 +25,11 @@ class BlogpostsController < ApplicationController
   end
 
   def create
-    @blog_post = Blogpost.new(params[:blog_post])
-
+    @blog_post = Blogpost.new(params[:blogpost])
     respond_to do |format|
       if @blog_post.save
         flash[:notice] = 'Blogpost was successfully created.'
-        format.html { redirect_to(@blog_post) }
+        format.html { redirect_to(blogposts_path) }
       else
         format.html { render "new" }
       end
@@ -48,7 +47,7 @@ class BlogpostsController < ApplicationController
     @blog_post = Blogpost.find(params[:id])
 
     respond_to do |format|
-      if @blog_post.update_attributes(params[:blog_post])
+      if @blog_post.update_attributes(params[:blogpost])
         flash[:notice] = 'Blogpost was successfully updated.'
         format.html { redirect_to(@blog_post) }
       else
@@ -62,7 +61,7 @@ class BlogpostsController < ApplicationController
     @blog_post.destroy
 
     respond_to do |format|
-      format.html { redirect_to(blog_posts_path) }
+      format.html { redirect_to(blogposts_path) }
     end
   end
 

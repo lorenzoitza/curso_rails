@@ -1,0 +1,9 @@
+<h1><%= @blog_post.title %></h1>
+<%= @blog_post.content %>
+
+<br />
+<%= link_to "Back", blogposts_path %>
+|
+<%= link_to "Edit", edit_blogpost_path(@blog_post) %>
+|
+<%= link_to "Destroy", blogpost_path(@blog_post), method: :delete, confirm: "Are you sure?" %>
