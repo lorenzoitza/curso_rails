@@ -1,14 +1,14 @@
 ##Curso de Ruby on Rails
 
 ###Aplicación de ejemplo
- 
+
 
 ###Retos:
 
 - Bloque 1:
 	- Crear app
 	- Verificar que todo corra bien
-	
+
 - Bloque 2:
 	- Hacer estáticas para las páginas (Home, About, Contact)
 	- Creación de vistas y funciones en controlador
@@ -20,10 +20,11 @@
 - Bloque 4:
 	- Implementar foundation - [Instalación](http://foundation.zurb.com/docs/rails.html)
 	- Agregar validaciones de Blogpost (uniqueness of title, presence of title,content)
+  - Hacer que se desaparezca el mensaje de validacion de la forma cuando se presione la "x"
 - Bloque 5:
 	- Creación de modelo de comments (poster:string, content:text)
 	- Hacer relacion Blogpost con comments (a nivel modelo)
- 
+
 
 <br>
 
