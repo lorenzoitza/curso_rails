@@ -1,9 +1,9 @@
 Blog::Application.routes.draw do
   root to: "pages#home"
-  match "/about", to: "pages#about"
-  match "/contact", to: "pages#contact"
-  match "/blog", to: "blogposts#index"
-  resources :blogposts
+  get "/about", to: "pages#about"
+  get "/contact", to: "pages#contact"
+  get "/blog", to: "blogposts#index"
+  resources :blogposts, except: [:index]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

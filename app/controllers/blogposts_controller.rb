@@ -29,7 +29,7 @@ class BlogpostsController < ApplicationController
     respond_to do |format|
       if @blog_post.save
         flash[:notice] = 'Blogpost was successfully created.'
-        format.html { redirect_to(blogposts_path) }
+        format.html { redirect_to(blog_path) }
       else
         format.html { render "new" }
       end
