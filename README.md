@@ -19,6 +19,7 @@
 	- Generar una migración para agregar un user_id(integer) a la tabla de Blogposts
 - Bloque 4:
 	- Implementar foundation - [Instalación](http://foundation.zurb.com/docs/rails.html)
+    	- Link para [Layout](https://gist.github.com/rkrdo/5118049)
 	- Agregar validaciones de Blogpost (uniqueness of title, presence of title,content)
   - Hacer que se desaparezca el mensaje de validacion de la forma cuando se presione la "x"
 - Bloque 5:
