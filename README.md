@@ -27,7 +27,7 @@
 	- Hacer relacion Blogpost con comments (a nivel modelo)
 - Bloque 6
 	- Implementar forma de comments en la vista de show del blogpost
--Bloque 7
+- Bloque 7
 	- AJAX en comments
 
 <br>
