@@ -26,11 +26,13 @@
         <h3>Comments:</h3>
         <div class="comments">
           <ul>
-          <% @blog_post.comments.each do |comment| %>
-            <li>
-              <%= comment.content %>
-            </li>
-          <% end %>
+            <% @blog_post.comments.each do |comment| %>
+              <% unless comment.new_record? %>
+                <li>
+                  <%= comment.content %>
+                </li>
+              <% end %>
+            <% end %>
           </ul>
         </div>
       </div>
