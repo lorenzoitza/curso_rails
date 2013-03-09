@@ -25,7 +25,10 @@
 - Bloque 5:
 	- Creación de modelo de comments (poster:string, content:text)
 	- Hacer relacion Blogpost con comments (a nivel modelo)
-
+- Bloque 6
+	- Implementar forma de comments en la vista de show del blogpost
+-Bloque 7
+	- AJAX en comments
 
 <br>
 
