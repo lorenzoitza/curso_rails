@@ -10,6 +10,7 @@ class BlogpostsController < ApplicationController
 
   def show
     @blog_post = Blogpost.find(params[:id])
+    @comment = @blog_post.comments.build
 
     respond_to do |format|
       format.html # show.html.erb

@@ -4,7 +4,7 @@ Blog::Application.routes.draw do
   get "/contact", to: "pages#contact"
   get "/blog", to: "blogposts#index"
   resources :blogposts, except: [:index] do
-    resources :comments
+    resources :comments, only: [:create]
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.
