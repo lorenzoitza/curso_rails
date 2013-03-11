@@ -8,4 +8,9 @@
   &:last-child{
     border-bottom: none;
   }
+  span {
+    float: right;
+    font-size: 12px;
+    line-height: 3;
+  }
 }

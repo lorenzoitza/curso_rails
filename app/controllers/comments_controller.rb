@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @blog_post }
+        format.js
       else
         format.html { render "new" }
       end
