@@ -32,6 +32,8 @@
 
 <br>
 
+Link para la [presentacion](https://docs.google.com/file/d/0Bxx65ZsNAzDAOWUzVTRBQU02UWc/edit)
+
 Elaborado por:
 
 [@kurenn](http://twitter.com/kurenn) (Abraham Kuri)
