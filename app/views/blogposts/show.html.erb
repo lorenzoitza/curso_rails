@@ -24,17 +24,7 @@
       </div>
       <div class="large-6 columns">
         <h3>Comments:</h3>
-        <div class="comments">
-          <ul>
-            <% @blog_post.comments.each do |comment| %>
-              <% unless comment.new_record? %>
-                <li>
-                  <%= comment.content %>
-                </li>
-              <% end %>
-            <% end %>
-          </ul>
-        </div>
+        <%= render @blog_post.comments %>
       </div>
     </div>
   </div>

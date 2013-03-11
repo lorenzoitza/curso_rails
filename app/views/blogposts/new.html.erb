@@ -1,33 +1,7 @@
 <div class="row">
   <div class="large-9 columns large-centered">
     <h3>New Blog Post</h3>
-    <%= form_for @blog_post do |f| %>
-      <% if @blog_post.errors.any? %>
-        <div id="error_explanation">
-          <div class="alert-box alert">
-            The form contains <%= pluralize(@blog_post.errors.count, "error") %>:
-          <ul>
-            <% @blog_post.errors.full_messages.each do |msg| %>
-              <li>- <%= msg %></li>
-            <% end %>
-          </ul>
-          <a href="#" class="close">&times;</a>
-          </div>
-        </div>
-      <% end %>
-
-      <div class="fields">
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-      </div>
-      <div class="fields">
-        <%= f.label :content %>
-        <%= f.text_area :content %>
-      </div>
-      <div class="actions">
-        <%= f.submit class: "button round" %>
-      </div>
-    <% end %>
+    <%= render 'form' %>
     <%= link_to "Back", blog_path %>
   </div>
 </div>
