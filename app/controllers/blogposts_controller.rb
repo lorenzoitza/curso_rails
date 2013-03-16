@@ -1,5 +1,6 @@
 class BlogpostsController < ApplicationController
   before_filter :authorize, except: [:index, :show]
+  before_filter :authorize_blog_post, only: [:edit, :update, :destroy]
 
   def index
     @blog_posts = Blogpost.all
@@ -67,4 +68,10 @@ class BlogpostsController < ApplicationController
     end
   end
 
+  private
+
+  def authorize_blog_post
+    @blog_post = Blogpost.find(params[:id])
+    deny_access if !current_user.blogposts.include?(@blog_post) 
+  end
 end
