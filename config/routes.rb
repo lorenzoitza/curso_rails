@@ -1,4 +1,18 @@
 Blog::Application.routes.draw do
+
+  root to: "pages#home"
+  get "/about", to: "pages#about"
+  get "/contact", to: "pages#contact"
+  get "/blog", to: "blogposts#index"
+  resources :blogposts, except: [:index] do
+    resources :comments, only: [:create]
+  end
+  resources :users
+  resources :sessions
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

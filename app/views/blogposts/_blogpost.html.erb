@@ -1,0 +1,4 @@
+<article class="blogpost">
+  <h3><%= link_to blogpost.title, blogpost_path(blogpost) %></h3>
+  <h6>Written by <%= blogpost.user.first_name %> on <%= blogpost_date(blogpost.created_at) %>.</h6>
+</article>

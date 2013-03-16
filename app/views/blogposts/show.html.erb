@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="large-9 large-centered columns">
+    <%= link_to "Back", blog_path, class: "round button small" %>
+    <div class="title">
+      <div class="right">written by <%= @blog_post.user.first_name %></div>
+      <h3><%= @blog_post.title %></h3>
+    </div>
+    <div class="content panel">
+      <%= @blog_post.content %>
+    </div>
+    <br />
+    <% if current_user %>
+      <div class="actions">
+        <%= link_to "Edit", edit_blogpost_path(@blog_post), class: "round button tiny" %>
+        |
+        <%= link_to "Destroy", blogpost_path(@blog_post), method: :delete, confirm: "Are you sure?", class: "round button tiny alert" %>
+      </div>
+    <% end %>
+    <hr />
+    <div class="row">
+      <div class="large-6 columns">
+        <% if current_user %>
+          <%= form_for [@blog_post, @comment], remote: true do |f| %>
+            <%= f.label :content %>
+            <%= f.text_area :content %>
+            <%= f.submit %>
+          <% end %>
+        <% else %>
+          Please login to comment
+        <% end %>
+      </div>
+      <div class="large-6 columns">
+        <h3>Comments:</h3>
+        <div id="comments">
+          <%= render @blog_post.comments %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

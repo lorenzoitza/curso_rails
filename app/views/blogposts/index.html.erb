@@ -1,0 +1,7 @@
+<div class="large-12 columns" role="content">
+  <% if current_user %>
+    <%= link_to "New Blog Post", new_blogpost_path, class: "round button small" %>
+  <% end %>
+
+  <%= render @blog_posts %>
+</div>
