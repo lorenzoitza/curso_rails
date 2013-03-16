@@ -27,6 +27,7 @@
       <div class="nav-bar right">
         <ul class="button-group">
           <li><%= link_to "Home", root_path, class: "button" %></li>
+          <li><%= link_to "Blog", blog_path, class: "button" %></li>
           <% if current_user %>
             <li><%= link_to "Log Out", session_path("current"), method: "delete", class: "button" %></li>
           <% else %>

@@ -1,6 +1,6 @@
 <% unless comment.new_record? %>
   <div class="comment">
     <%= comment.content %>
-    <span><%= time_ago_in_words(comment.created_at) %> ago</span>
+    <span><%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.first_name %></span>
   </div>
 <% end %>

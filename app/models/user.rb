@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   before_save { |user| user.email = email.downcase }
   has_many :blogposts
+  has_many :comments
 end
