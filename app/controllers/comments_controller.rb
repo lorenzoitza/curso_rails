@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to @blog_post }
         format.js
       else
-        format.html { render "new" }
+        format.html { redirect_to @blog_post }
       end
     end
   end
