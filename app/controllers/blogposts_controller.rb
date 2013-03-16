@@ -1,4 +1,5 @@
 class BlogpostsController < ApplicationController
+  before_filter :authorize, except: [:index, :show]
 
   def index
     @blog_posts = Blogpost.all
@@ -18,7 +19,7 @@ class BlogpostsController < ApplicationController
   end
 
   def new
-    @blog_post = Blogpost.new
+    @blog_post = current_user.blogposts.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -26,7 +27,7 @@ class BlogpostsController < ApplicationController
   end
 
   def create
-    @blog_post = Blogpost.new(params[:blogpost])
+    @blog_post = current_user.blogposts.create(params[:blogpost])
     respond_to do |format|
       if @blog_post.save
         flash[:notice] = 'Blogpost was successfully created.'

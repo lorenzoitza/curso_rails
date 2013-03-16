@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="large-4 columns large-centered">
+    <h1>Sign Up</h1>
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert-box alert">
+            This form contains <%= pluralize(@user.errors.count, "error") %>:
+            <ul class="error-list">
+              <% @user.errors.full_messages.each do |msg|  %>
+                <li>- <%= msg %></li>
+              </ul>
+            <% end %>
+            <a href="#" class="close">&times;</a>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="fields">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
+
+      <div class="fields">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
+
+      <div class="fields">
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+      <div class="fields">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Sign Up", class: "button round small" %>
+      </div>
+    <% end %>
+    <%= link_to "Back", root_path %>
+  </div>
+</div>
