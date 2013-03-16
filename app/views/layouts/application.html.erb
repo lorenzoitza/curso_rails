@@ -45,6 +45,16 @@
   </div>
   <!-- End Nav -->
 
+  <div class="row">
+    <div class="large-6 columns large-centered">
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, class: "alert-box #{key}") do %>
+          <%= value %>
+          <%= content_tag(:a,"x", class:"close") %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 
   <!-- Main Page Content -->
   <div class="row">

@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :email, presence: true, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false }
+  validates_presence_of :first_name, :last_name, :password, :password_confirmation
   before_save { |user| user.email = email.downcase }
   has_many :blogposts
   has_many :comments

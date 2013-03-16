@@ -3,4 +3,4 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
   $(".close").on "click", ->
-    $("#error_explanation").fadeOut()
+    $("#error_explanation, .alert-box").fadeOut()
